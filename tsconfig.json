@@ -1,29 +1,14 @@
 {
   "compilerOptions": {
+    "module": "commonjs",
+    "jsx": "react",
     "strict": true,
-    "strictNullChecks": true,
-    "strictFunctionTypes": true,
-    "noImplicitThis": true,
-    "alwaysStrict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
-    "noImplicitAny": true,
-    "removeComments": true,
-    "target": "es5",
+    "allowJs": true,
+    "esModuleInterop": true,
     "lib": [
       "dom",
-      "es5",
-      "scripthost",
-      "es2015.collection",
-      "es2015.symbol",
-      "es2015.iterable",
-      "es2015.promise"
-    ],
-    "jsx": "react"
+      "es6",
+    ]
   },
-  "files": [
-    "./custom-typings/atlaskit.d.ts"
-  ]
+  "include": ["./src"]
 }

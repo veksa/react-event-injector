@@ -1,5 +1,17 @@
+.idea
 node_modules/
 /dist/
 .DS_Store
 coverage/
+static/
+lib/
+es/
 yarn-error.log
+
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions

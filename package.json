@@ -1,55 +1,38 @@
 {
-  "name": "react-event-injector",
-  "version": "1.1.2",
-  "description": "React way to addEventListener",
-  "main": "dist/es5/index.js",
-  "scripts": {
-    "test": "ts-react-toolbox test",
-    "bootstrap": "ts-react-toolbox init",
-    "dev": "ts-react-toolbox dev",
-    "test:ci": "ts-react-toolbox test --runInBand --coverage",
-    "build": "ts-react-toolbox build",
-    "release": "ts-react-toolbox release",
-    "lint": "ts-react-toolbox lint",
-    "static": "ts-react-toolbox publish",
-    "format": "ts-react-toolbox format",
-    "analyze": "ts-react-toolbox analyze"
+  "name": "@veksa/react-event-injector",
+  "version": "1.1.2-patch.1",
+  "packageManager": "yarn@4.7.0",
+  "main": "./dist/cjs/eventInjector.cjs",
+  "types": "./dist/eventInjector.d.ts",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "types": "./dist/eventInjector.d.ts",
+      "import": "./dist/eventInjector.mjs",
+      "default": "./dist/cjs/eventInjector.cjs"
+    }
   },
-  "author": "Anton Korzunov <thekashey@gmail.com>",
-  "license": "MIT",
-  "devDependencies": {
-    "size-limit": "^0.20.1",
-    "ts-react-toolbox": "^0.1.21"
-  },
-  "engines": {
-    "node": ">=8.5.0"
-  },
-  "peerDependencies": {
-    "react": "^16.3.0"
-  },
-  "jsnext:main": "dist/es2015/index.js",
-  "module": "dist/es2015/index.js",
-  "types": "dist/es5/index.d.ts",
   "files": [
     "dist"
   ],
-  "keywords": [
-    "react",
-    "event",
-    "passive",
-    "manager",
-    "observer",
-    "event listener"
-  ],
-  "size-limit": [
-    {
-      "path": "dist/es5/index.js",
-      "limit": "1.5 KB"
-    }
-  ],
-  "homepage": "https://github.com/theKashey/react-event-injector#readme",
-  "dependencies": {
-    "prop-types": "^15.6.2",
-    "tiny-invariant": "^1.0.1"
+  "scripts": {
+    "compile": "tsc --noEmit",
+    "build": "yarn clean && tsup",
+    "clean": "rimraf dist"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.12",
+    "@types/react-dom": "^19.0.4",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "rimraf": "^6.0.1",
+    "tslib": "^2.8.1",
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.2"
+  },
+  "peerDependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tslib": "^2.8.1"
   }
 }
