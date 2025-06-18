@@ -1,24 +1,43 @@
 {
   "name": "@veksa/react-event-injector",
   "version": "1.1.2-patch.1",
+  "description": "Declarative React event manager for handling DOM events with explicit passive/active support",
+  "homepage": "https://github.com/veksa/react-event-injector",
   "packageManager": "yarn@4.9.2",
-  "main": "./dist/cjs/eventInjector.cjs",
-  "types": "./dist/eventInjector.d.ts",
+  "keywords": [
+    "react",
+    "events",
+    "dom-events",
+    "passive-events",
+    "event-listener",
+    "event-handling"
+  ],
+  "author": {
+    "name": "Aleksandr Khizhnyi",
+    "email": "mendler88@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:veksa/react-event-injector.git"
+  },
+  "main": "./dist/cjs/index.cjs",
+  "types": "./dist/index.d.ts",
   "exports": {
     "./package.json": "./package.json",
     ".": {
-      "types": "./dist/eventInjector.d.ts",
-      "import": "./dist/eventInjector.mjs",
-      "default": "./dist/cjs/eventInjector.cjs"
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "default": "./dist/cjs/index.cjs"
     }
   },
+  "sideEffects": false,
   "files": [
     "dist"
   ],
   "scripts": {
-    "compile": "tsc --noEmit",
+    "clean": "rimraf dist",
     "build": "yarn clean && tsup",
-    "clean": "rimraf dist"
+    "compile": "tsc --noEmit"
   },
   "devDependencies": {
     "@types/react": "^19.0.12",

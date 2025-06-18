@@ -3,7 +3,7 @@ import {defineConfig, Options} from 'tsup';
 export default defineConfig((options): Options[] => {
     const commonOptions: Options = {
         entry: {
-            eventInjector: 'src/index.ts',
+            index: 'src/index.ts',
         },
         sourcemap: true,
         target: ["esnext"],
